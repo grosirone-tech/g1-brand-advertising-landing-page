@@ -1,0 +1,46 @@
+.upper-button {
+  background-color: white;
+  text-align: center;
+  width: 14rem;
+  height: 3.8rem;
+  border-radius: 1rem;
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  color: black;
+  font-size: 1.25rem;
+  font-weight: 600;
+  overflow: hidden;
+}
+
+.button-animation {
+  background-color: #6558f5;
+  border-radius: 0.75rem;
+  height: 3rem;
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0.25rem;
+  top: 0.25rem;
+  z-index: 10;
+  transition: width 0.5s;
+}
+
+.email-icon {
+  display: flex;
+  color: #fff;
+  font-size: larger;
+  align-items: center;
+  transition: all 0.5s;
+}
+
+.email-icon:hover {
+  color: #fff;
+  text-shadow: -1px 3px 15px rgba(255, 255, 255, 0.58);
+}
+
+.upper-button:hover .button-animation {
+  width: 13.2rem;
+  cursor: pointer;
+}
