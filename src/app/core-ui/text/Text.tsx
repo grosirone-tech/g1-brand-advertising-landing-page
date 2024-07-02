@@ -1,4 +1,4 @@
-import './Text.css';
+import './text.css';
 
 type Props = {
   size?: 'header' | 'normal' | 'small';

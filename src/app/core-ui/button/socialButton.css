@@ -1,45 +1,3 @@
-footer {
-  width: 100vw;
-  background-color: rgb(241, 241, 241);
-  color: black;
-  padding: 1.5rem 2rem;
-  font-family: 'Poppins', sans-serif;
-}
-
-.upper-footer {
-  display: flex;
-  height: 13rem;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
-  margin: 2rem 0rem;
-}
-
-.upper-footer-text {
-  font-size: smaller;
-  padding: 1.7rem;
-}
-
-.lower-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-  height: auto;
-}
-
-.copyright-symbol {
-  color: #6558f5;
-  font-size: large;
-  font-weight: bold;
-}
-
-.lower-footer-connect {
-  display: flex;
-  font-size: medium;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-
 .social-icon {
   display: flex;
   justify-content: space-evenly;
@@ -163,13 +121,6 @@ footer {
     width: 30px;
     height: 30px;
     font-size: 14px;
-  }
-  
-  .lower-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: auto;
   }
 
   .lower-footer-connect {
