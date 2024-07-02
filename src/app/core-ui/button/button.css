@@ -1,0 +1,73 @@
+/* primary */
+.primary-button {
+    background-color: white;
+    text-align: center;
+    width: 14rem;
+    height: 3.7rem;
+    border-radius: 1rem;
+    position: relative;
+    color: black;
+    font-size: 1.25rem;
+    font-weight: 600;
+    overflow: hidden;
+  }
+  
+  .button-animation {
+    background-color: #6558f5;
+    border-radius: 0.75rem;
+    height: 3rem;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0.25rem;
+    top: 0.25rem;
+    z-index: 10;
+    transition: width 0.5s;
+  }
+  
+  .email-icon {
+    display: flex;
+    color: #fff;
+    font-size: larger;
+    align-items: center;
+    transition: all 0.5s;
+  }
+  
+  .email-icon:hover {
+    color: #fff;
+    text-shadow: -1px 3px 15px rgba(255, 255, 255, 0.655);
+  }
+  
+  .primary-button:hover .button-animation {
+    width: 13.3rem;
+    cursor: pointer;
+  }
+  
+  /* secondary */
+  .secondary-button {
+    background-color: rgb(28, 28, 28);
+    text-align: center;
+    width: 14rem;
+    height: 3.7rem;
+    border-radius: 1rem;
+    position: relative;
+    color: rgb(243, 238, 238);
+    font-size: 1.25rem;
+    font-weight: 600;
+    overflow: hidden;
+  }
+  
+  .secondary-button.button-primary {
+    background-color: #0056b3;
+  }
+  
+  .secondary-button:hover .button-animation {
+    width: 13.3rem;
+    cursor: pointer;
+  }
+  
+  .secondary-button.button-secondary {
+    background-color: #495057;
+  }
