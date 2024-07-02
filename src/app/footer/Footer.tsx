@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="upper-footer-text">
           <Text size="header" title="HUBUNGI KAMI" />
         </div>
-        <Button />
+        <Button type='primary' title='gtrone@grosir.one'/>
       </div>
 
       <div className="lower-footer">

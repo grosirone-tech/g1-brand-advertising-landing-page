@@ -20,8 +20,3 @@
   font-optical-sizing: auto;
   font-size: 0.9rem;
 }
-
-.custom-button-class {
-  transform: translateX(0.5rem);
-  margin-left: 2rem;
-}

@@ -1,11 +1,10 @@
-.upper-button {
+.primary-button {
   background-color: white;
   text-align: center;
   width: 14rem;
-  height: 3.8rem;
+  height: 3.7rem;
   border-radius: 1rem;
   position: relative;
-  font-family: 'Poppins', sans-serif;
   color: black;
   font-size: 1.25rem;
   font-weight: 600;
@@ -40,7 +39,34 @@
   text-shadow: -1px 3px 15px rgba(255, 255, 255, 0.58);
 }
 
-.upper-button:hover .button-animation {
-  width: 13.2rem;
+.primary-button:hover .button-animation {
+  width: 13.3rem;
   cursor: pointer;
+}
+
+/* second */
+.secondary-button {
+  background-color: rgb(28, 28, 28);
+  text-align: center;
+  width: 14rem;
+  height: 3.7rem;
+  border-radius: 1rem;
+  position: relative;
+  color: rgb(243, 238, 238);
+  font-size: 1.25rem;
+  font-weight: 600;
+  overflow: hidden;
+}
+
+.secondary-button.button-primary {
+  background-color: #0056b3;
+}
+
+.secondary-button:hover .button-animation {
+  width: 13.3rem;
+  cursor: pointer;
+}
+
+.secondary-button.button-secondary {
+  background-color: #495057;
 }
