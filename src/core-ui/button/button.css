@@ -1,0 +1,27 @@
+/* Primary button */
+.primary-button {
+  --color: #f6c143;
+  background-color: var(--color);
+  display: block;
+  width: auto;
+  height: 2.7em;
+  line-height: 2.5em;
+  margin: 6px;
+  padding: 2px 25px;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  z-index: 1;
+  font-size: 17px;
+  border-radius: 45px;
+  color: #000000;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.primary-button:hover {
+  color: #f2f2f2;
+  background-color: #c89b34;
+  filter: drop-shadow(2px 2px 9px #0000007a);
+  transform: scale(1.01);
+}
