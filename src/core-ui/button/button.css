@@ -22,6 +22,6 @@
 .primary-button:hover {
   color: #f2f2f2;
   background-color: #c89b34;
-  filter: drop-shadow(2px 2px 9px #0000007a);
-  transform: scale(1.01);
+  filter: drop-shadow(2px 2px 9px #1f1f1f7a);
+  transform: scale(1.02);
 }
