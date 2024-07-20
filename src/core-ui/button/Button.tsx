@@ -9,7 +9,7 @@ type Props = {
   style?: React.CSSProperties;
 };
 
-export default function Button(props: Props) {
+export function Button(props: Props) {
   const {type, content, className, style, onClick} = props;
 
   return (
