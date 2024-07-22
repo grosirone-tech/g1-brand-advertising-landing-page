@@ -2,9 +2,11 @@
 .primary-button {
   --color: #f6c143;
   background-color: var(--color);
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: auto;
-  height: 2.7em;
+  height: 3em;
   line-height: 2.5em;
   margin: 6px;
   padding: 2px 25px;
@@ -24,4 +26,19 @@
   background-color: #c89b34;
   filter: drop-shadow(2px 2px 9px #1f1f1f7a);
   transform: scale(1.02);
+}
+
+.button-icon {
+  width: fit-content;
+  height: auto;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px 0 0;
+}
+
+.button-icon svg {
+  width: 30px;
+  height: auto;
+  display: flex;
 }

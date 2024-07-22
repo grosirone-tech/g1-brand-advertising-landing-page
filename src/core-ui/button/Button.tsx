@@ -1,5 +1,6 @@
 import './button.css';
 import {Text} from '../text/Text';
+import {ReactNode} from 'react';
 
 type Props = {
   type?: 'primary' | 'secondary';
@@ -7,10 +8,11 @@ type Props = {
   content: string;
   className?: string;
   style?: React.CSSProperties;
+  icon?: ReactNode;
 };
 
 export function Button(props: Props) {
-  const {type, content, className, style, onClick} = props;
+  const {type, content, className, style, onClick, icon} = props;
 
   return (
     <button
@@ -18,7 +20,7 @@ export function Button(props: Props) {
       className={type === 'primary' ? 'primary-button' : 'secondary-button'}
       style={style}
     >
-      <div className="button-animation email-icon"></div>
+      {icon && <span className="button-icon">{icon}</span>}
       <Text size="normal" content={content} />
     </button>
   );
