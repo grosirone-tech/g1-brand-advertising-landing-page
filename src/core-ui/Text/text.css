@@ -1,29 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300;400;700&display=swap');
 
-.header-text {
+.header-text, .subheader-text, .normal-text, .navbar-text, .small-text {
     font-family: "Sulphur Point", sans-serif;
     font-optical-sizing: auto;
-    font-size: 3rem;
+}
+
+.header-text {
+    font-size: 2.4rem;
     font-weight: 1000;
 }
 
 .subheader-text {
-    font-family: "Sulphur Point", sans-serif;
-    font-optical-sizing: auto;
-    font-size: 2.2rem;
+    font-size: 2.8rem;
     font-weight: 800;
 }
 
 .normal-text {
-    font-family: "Sulphur Point", sans-serif;
-    font-optical-sizing: auto;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.navbar-text {
+    font-size: 1.2rem;
     font-weight: 500;
 }
 
 .small-text {
-    font-family: "Sulphur Point", sans-serif;
-    font-optical-sizing: auto;
-    font-size: 1.1rem;
+    font-size: .9rem;
     font-weight: 500;
 }
