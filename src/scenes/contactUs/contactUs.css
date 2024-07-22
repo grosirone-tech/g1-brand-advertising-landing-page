@@ -1,0 +1,20 @@
+.contact-us-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3em;
+}
+
+.contact-us-top {
+    display: flex;
+}
+
+.contact-us-top Text {
+    color: rgb(231, 231, 231);
+}
+
+.contact-us-low {
+    margin: 2em;
+    display: flex;
+}
