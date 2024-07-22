@@ -1,5 +1,5 @@
 import './button.css';
-import {Text} from '../text/Text';
+import {Text} from '@/core-ui/text/Text';
 import {ReactNode} from 'react';
 
 type Props = {
@@ -17,8 +17,11 @@ export function Button(props: Props) {
   return (
     <button
       type="button"
-      className={type === 'primary' ? 'primary-button' : 'secondary-button'}
+      className={`${
+        type === 'primary' ? 'primary-button' : 'secondary-button'
+      } ${className}`}
       style={style}
+      onClick={onClick}
     >
       {icon && <span className="button-icon">{icon}</span>}
       <Text size="normal" content={content} />
