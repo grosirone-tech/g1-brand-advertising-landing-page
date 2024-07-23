@@ -1,0 +1,122 @@
+.our-services {
+  padding: 40px 50px;
+  text-align: center;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  position: relative;
+  background-color: #fefefe;
+}
+
+.our-services-title {
+  height: auto;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.service-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 2rem 0;
+}
+
+.service {
+  flex: 1 1 22%;
+  margin: 10px;
+  height: auto;
+  width: 20%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+  border-radius: 35px;
+  transition: all 0.6s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.145);
+}
+
+.service:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(5px 5px 10px #525252);
+}
+
+.services-img {
+  width: 8rem;
+  height: 8rem;
+  margin-bottom: 2rem;
+  background-color: #d42f13;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(1);
+  transition: all 0.5s ease-in-out;
+}
+
+.service img {
+  object-fit: contain;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  max-width: 5.2rem;
+}
+
+.service-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+  color: rgb(31, 31, 31);
+}
+
+@media (max-width: 768px) {
+  .service {
+    flex: 1 1 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .service {
+    flex: 1 1 100%;
+  }
+}
+
+.service.hovered {
+  background-color: #d42f13;
+  color: #000000;
+}
+
+.service.hovered .bubble {
+  background-color: #f9f9f900;
+  border: 8px solid #f9f9f9;
+}
+
+.service.hovered .services-img {
+  transform: scale(1.15);
+  background-color: #f9f9f9;
+}
+
+.service.hovered .divider {
+  border-top: 3px solid #ffffff;
+  width: 100%;
+}
+
+.blur {
+  filter: blur(5px);
+}
+
+.service.hovered .bubble {
+  background-color: #f9f9f900;
+  border: 8px solid #f9f9f9;
+  pointer-events: none;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  opacity: 0.4;
+}
