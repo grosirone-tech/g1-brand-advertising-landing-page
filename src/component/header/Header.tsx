@@ -1,9 +1,9 @@
 'use client';
 
 import './header.css';
-import {Text} from '@/core-ui/text/Text';
-import {Button} from '@/core-ui/button/Button';
-import {useState, useEffect} from 'react';
+import { Text } from '@/core-ui/text/Text';
+import { Button } from '@/core-ui/button/Button';
+import { useState, useEffect } from 'react';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,6 +30,20 @@ export function Header() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, [scrollPosition]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 867) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -76,7 +90,7 @@ export function Header() {
           }
         });
       },
-      {threshold: 0.6},
+      { threshold: 0.6 },
     );
 
     sections.forEach((section) => {
@@ -98,45 +112,37 @@ export function Header() {
           alt="Logo"
         />
       </div>
-      <div className={`dropdown ${isMenuOpen ? 'active' : ''}`}>
+      <div className={`dropdown ${isMenuOpen ? 'opened' : ''}`}>
         <div className="dropdown-content">
           <Text
             size="normal"
             content="Home"
-            className={`nav-text ${activeSection === 'home' ? 'active' : ''}`}
+            className={`nav-text dropdown-nav-text ${activeSection === 'home' ? 'active' : ''}`}
           />
           <Text
             size="normal"
             content="Services"
-            className={`nav-text ${
-              activeSection === 'services' ? 'active' : ''
-            }`}
+            className={`nav-text dropdown-nav-text ${activeSection === 'services' ? 'active' : ''}`}
           />
           <Text
             size="normal"
             content="Prices"
-            className={`nav-text ${
-              activeSection === 'pricing' ? 'active' : ''
-            }`}
+            className={`nav-text dropdown-nav-text ${activeSection === 'pricing' ? 'active' : ''}`}
           />
           <Text
             size="normal"
             content="Work"
-            className={`nav-text ${
-              activeSection === 'product' ? 'active' : ''
-            }`}
+            className={`nav-text dropdown-nav-text ${activeSection === 'product' ? 'active' : ''}`}
           />
           <Text
             size="normal"
             content="Tech"
-            className={`nav-text ${activeSection === 'tech' ? 'active' : ''}`}
+            className={`nav-text dropdown-nav-text ${activeSection === 'tech' ? 'active' : ''}`}
           />
           <Text
             size="normal"
             content="Contact Us"
-            className={`nav-text ${
-              activeSection === 'contact' ? 'active' : ''
-            }`}
+            className={`nav-text dropdown-nav-text ${activeSection === 'contact' ? 'active' : ''}`}
           />
           <div className="login">
             <Button
@@ -146,7 +152,7 @@ export function Header() {
                 console.log('clicked');
               }}
               className="login"
-              style={{width: '6rem'}}
+              style={{ width: '6rem' }}
             />
           </div>
         </div>
@@ -177,7 +183,6 @@ export function Header() {
           content="Tech"
           className={`nav-text ${activeSection === 'tech' ? 'active' : ''}`}
         />
-
         <Text
           size="normal"
           content="Contact Us"
@@ -190,7 +195,7 @@ export function Header() {
           onClick={() => {
             console.log('clicked');
           }}
-          style={{width: 'auto', fontWeight: 'bolder'}}
+          style={{ width: 'auto', fontWeight: 'bolder' }}
         />
       </div>
       <div className="hamburger-menu" onClick={toggleMenu}>
