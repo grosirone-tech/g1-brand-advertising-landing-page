@@ -50,7 +50,7 @@ const Home: React.FC = () => {
   }, []);
 
   return (
-    <header ref={homeRef} className="banner">
+    <header ref={homeRef} className="banner" id='home'>
       <div className="container">
         <div className="home-img" ref={imageRef}>
           <img

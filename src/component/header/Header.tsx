@@ -102,6 +102,11 @@ export function Header() {
         <div className="dropdown-content">
           <Text
             size="normal"
+            content="Home"
+            className={`nav-text ${activeSection === 'home' ? 'active' : ''}`}
+          />
+          <Text
+            size="normal"
             content="Services"
             className={`nav-text ${
               activeSection === 'services' ? 'active' : ''
@@ -147,6 +152,11 @@ export function Header() {
         </div>
       </div>
       <div className="navigation">
+        <Text
+          size="normal"
+          content="Home"
+          className={`nav-text ${activeSection === 'home' ? 'active' : ''}`}
+        />
         <Text
           size="normal"
           content="Services"
