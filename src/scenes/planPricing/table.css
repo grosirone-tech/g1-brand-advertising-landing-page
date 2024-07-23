@@ -1,0 +1,54 @@
+.price-table {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    width: 90%;
+    margin: 0;
+}
+
+.table-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.table-container table {
+    width: 100%;
+    margin-top: 10px;
+    margin: 2em;
+    border-collapse: collapse;
+}
+
+.table-container table thead td, tbody tr td {
+    padding: 10px 10px 10px 0;
+}
+
+.table-container table tbody tr td:nth-child(1) {
+    text-align: justify;
+}
+
+.table-container table thead td:nth-child(2), tbody tr td:nth-child(2) {
+    background-color: rgb(193, 193, 193);
+}
+
+.table-container table thead td:nth-child(3), tbody tr td:nth-child(3) {
+    background-color: rgb(150, 150, 150);
+}
+
+.table-container table thead td:nth-child(4), tbody tr td:nth-child(4) {
+    background-color: rgb(125, 125, 125);
+}
+
+@media (max-width: 768px) {
+    .price-table {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .table-container {
+        overflow-x: auto;
+        margin: 1em 0;
+    }
+}
