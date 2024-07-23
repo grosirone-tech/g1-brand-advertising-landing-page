@@ -54,7 +54,7 @@ const Home: React.FC = () => {
       <div className="container">
         <div className="home-img" ref={imageRef}>
           <img
-            src="https://i.ytimg.com/vi/AnYEmdwwnLA/maxresdefault.jpg"
+            src="https://i.ytimg.com/vi/RDmmy9GEc5U/maxresdefault.jpg"
             alt="home"
           />
         </div>
