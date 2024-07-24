@@ -37,12 +37,11 @@
   transition: all 0.4s ease-in-out;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.145);
 }
 
 .service:hover {
   transform: scale(1.04);
-  filter: drop-shadow(5px 5px 10px #525252);
+  box-shadow: 4px 5px 14px rgba(255, 255, 255, 0.53);
 }
 
 .services-img {
