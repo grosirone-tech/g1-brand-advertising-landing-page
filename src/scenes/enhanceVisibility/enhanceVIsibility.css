@@ -1,0 +1,17 @@
+.enhance-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 4em;
+}
+
+.enhance-specifications {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
