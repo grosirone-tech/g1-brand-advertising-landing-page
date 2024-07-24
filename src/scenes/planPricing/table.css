@@ -4,44 +4,55 @@
     align-content: center;
     align-items: center;
     justify-items: center;
-    width: 90%;
+    width: 100%;
     margin: 0;
 }
 
 .table-container {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    margin-top: 0px;
 }
 
 .table-container table {
     width: 100%;
     margin-top: 10px;
-    margin: 2em;
+    margin: .4em 2em;
     border-collapse: collapse;
 }
 
+.table-container table thead td {
+    text-align: center;
+    
+}
+
 .table-container table thead td, tbody tr td {
-    padding: 10px 10px 10px 0;
+    padding: 10px;
+}
+
+.table-container table thead td:nth-child(1), tbody tr td:nth-child(1) {
+    padding-left: 0px;
 }
 
 .table-container table tbody tr td:nth-child(1) {
-    text-align: justify;
+    text-align: left;
+    width: 35%;
 }
 
 .table-container table thead td:nth-child(2), tbody tr td:nth-child(2) {
-    background-color: rgb(193, 193, 193);
+    background-color: rgb(232, 232, 232);
 }
 
 .table-container table thead td:nth-child(3), tbody tr td:nth-child(3) {
-    background-color: rgb(150, 150, 150);
+    background-color: #f8d37e;
 }
 
 .table-container table thead td:nth-child(4), tbody tr td:nth-child(4) {
-    background-color: rgb(125, 125, 125);
+    background-color: #f6c143;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 910px) {
     .price-table {
         flex-direction: column;
         width: 100%;

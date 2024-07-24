@@ -1,16 +1,11 @@
 import './table.css';
-
 import React from 'react';
-
 import {Text} from '@/core-ui/text/Text';
 
 export interface TableProps {
   data: Array<any>;
-
   tableHeaders: Array<string>;
-
   tableBodies: Array<string>;
-
   stickyHeader?: boolean;
 }
 
