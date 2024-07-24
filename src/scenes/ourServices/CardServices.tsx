@@ -21,7 +21,7 @@ const CardServices: React.FC<CardProps> = ({
         <img src={imageSrc} alt="Service" />
       </div>
       <div className="service-text">
-        <Text size="subheader" content={subtitle} />
+        <Text size="subheader" content={subtitle} style={{marginBottom: '20px'}}/>
         <Text
           className="description"
           size="small"
