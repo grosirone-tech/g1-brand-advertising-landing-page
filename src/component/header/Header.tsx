@@ -1,9 +1,9 @@
 'use client';
 
 import './header.css';
-import { Text } from '@/core-ui/text/Text';
-import { Button } from '@/core-ui/button/Button';
-import { useState, useEffect } from 'react';
+import {Text} from '@/core-ui/text/Text';
+import {Button} from '@/core-ui/button/Button';
+import {useState, useEffect} from 'react';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -80,8 +80,19 @@ export function Header() {
     }
   };
 
+  const scrollIntoView = (
+    selector: string,
+    block: 'start' | 'center' | 'end' | 'nearest' = 'start',
+  ) => {
+    const element = document.querySelector(selector);
+    if (element) {
+      element.scrollIntoView({behavior: 'smooth', block});
+      closeMenu(); // Close the menu after clicking on a menu item
+    }
+  };
+
   useEffect(() => {
-    const sections = document.querySelectorAll('section');
+    const sections = document.querySelectorAll('[id]');
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -90,7 +101,7 @@ export function Header() {
           }
         });
       },
-      { threshold: 0.6 },
+      {threshold: 0.6},
     );
 
     sections.forEach((section) => {
@@ -103,6 +114,14 @@ export function Header() {
       });
     };
   }, []);
+
+  const handleNavClick = (
+    sectionId: string,
+    block: 'start' | 'center' | 'end' | 'nearest' = 'start',
+  ) => {
+    setActiveSection(sectionId);
+    scrollIntoView(`#${sectionId}`, block);
+  };
 
   return (
     <div className={navClass}>
@@ -117,32 +136,50 @@ export function Header() {
           <Text
             size="normal"
             content="Home"
-            className={`nav-text dropdown-nav-text ${activeSection === 'home' ? 'active' : ''}`}
+            className={`nav-text dropdown-nav-text ${
+              activeSection === 'home' ? 'active' : ''
+            }`}
+            onClick={() => handleNavClick('home', 'nearest')}
           />
           <Text
             size="normal"
             content="Services"
-            className={`nav-text dropdown-nav-text ${activeSection === 'services' ? 'active' : ''}`}
+            className={`nav-text dropdown-nav-text ${
+              activeSection === 'services' ? 'active' : ''
+            }`}
+            onClick={() => handleNavClick('services', 'nearest')}
           />
           <Text
             size="normal"
             content="Prices"
-            className={`nav-text dropdown-nav-text ${activeSection === 'pricing' ? 'active' : ''}`}
+            className={`nav-text dropdown-nav-text ${
+              activeSection === 'pricing' ? 'active' : ''
+            }`}
+            onClick={() => handleNavClick('pricing', 'nearest')}
           />
           <Text
             size="normal"
             content="Work"
-            className={`nav-text dropdown-nav-text ${activeSection === 'product' ? 'active' : ''}`}
+            className={`nav-text dropdown-nav-text ${
+              activeSection === 'product' ? 'active' : ''
+            }`}
+            onClick={() => handleNavClick('product', 'nearest')}
           />
           <Text
             size="normal"
             content="Tech"
-            className={`nav-text dropdown-nav-text ${activeSection === 'tech' ? 'active' : ''}`}
+            className={`nav-text dropdown-nav-text ${
+              activeSection === 'tech' ? 'active' : ''
+            }`}
+            onClick={() => handleNavClick('tech', 'nearest')}
           />
           <Text
             size="normal"
             content="Contact Us"
-            className={`nav-text dropdown-nav-text ${activeSection === 'contact' ? 'active' : ''}`}
+            className={`nav-text dropdown-nav-text ${
+              activeSection === 'contact' ? 'active' : ''
+            }`}
+            onClick={() => handleNavClick('contact', 'nearest')}
           />
           <div className="login">
             <Button
@@ -152,7 +189,7 @@ export function Header() {
                 console.log('clicked');
               }}
               className="login"
-              style={{ width: '6rem' }}
+              style={{width: '6rem'}}
             />
           </div>
         </div>
@@ -162,31 +199,37 @@ export function Header() {
           size="normal"
           content="Home"
           className={`nav-text ${activeSection === 'home' ? 'active' : ''}`}
+          onClick={() => handleNavClick('home')}
         />
         <Text
           size="normal"
           content="Services"
           className={`nav-text ${activeSection === 'services' ? 'active' : ''}`}
+          onClick={() => handleNavClick('services')}
         />
         <Text
           size="normal"
           content="Prices"
           className={`nav-text ${activeSection === 'pricing' ? 'active' : ''}`}
+          onClick={() => handleNavClick('pricing')}
         />
         <Text
           size="normal"
           content="Work"
           className={`nav-text ${activeSection === 'product' ? 'active' : ''}`}
+          onClick={() => handleNavClick('product')}
         />
         <Text
           size="normal"
           content="Tech"
           className={`nav-text ${activeSection === 'tech' ? 'active' : ''}`}
+          onClick={() => handleNavClick('tech')}
         />
         <Text
           size="normal"
           content="Contact Us"
           className={`nav-text ${activeSection === 'contact' ? 'active' : ''}`}
+          onClick={() => handleNavClick('contact')}
         />
         <Button
           type="primary"
@@ -195,7 +238,7 @@ export function Header() {
           onClick={() => {
             console.log('clicked');
           }}
-          style={{ width: 'auto', fontWeight: 'bolder' }}
+          style={{width: 'auto', fontWeight: 'bolder'}}
         />
       </div>
       <div className="hamburger-menu" onClick={toggleMenu}>
@@ -206,12 +249,13 @@ export function Header() {
           <svg width="50" height="50" viewBox="0 0 100 100">
             <path
               className="line line1"
-              d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
+              d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81
+              81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
             />
             <path className="line line2" d="M 20,50 H 80" />
             <path
               className="line line3"
-              d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"
+              d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058"
             />
           </svg>
         </button>
