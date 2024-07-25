@@ -5,8 +5,7 @@ import './contactUs.css';
 
 export default function ContactUs() {
   return (
-    <section id="contact">
-      <div className="contact-us-container">
+    <section id="contact" className="contact-us-container">
         <div className="contact-us-top">
           <Text size="header" content="HUBUNGI KAMI" style={{}} />
         </div>
@@ -26,7 +25,6 @@ export default function ContactUs() {
             }
           />
         </div>
-      </div>
     </section>
   );
 }
