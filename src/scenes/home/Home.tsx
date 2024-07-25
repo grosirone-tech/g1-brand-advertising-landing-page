@@ -21,7 +21,7 @@ const Home: React.FC = () => {
     ) {
       const bannerHeight = homeRef.current.offsetHeight;
       const parallaxRate = 0.5;
-      const opacityRate = 1.2;
+      const opacityRate = 1;
 
       imageRef.current.style.transform = `translateY(${
         scrollY * parallaxRate
@@ -50,7 +50,7 @@ const Home: React.FC = () => {
   }, []);
 
   return (
-    <header ref={homeRef} className="banner" id='home'>
+    <header ref={homeRef} className="banner" id="home">
       <div className="container">
         <div className="home-img" ref={imageRef}>
           <img
