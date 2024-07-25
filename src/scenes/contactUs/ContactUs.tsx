@@ -7,7 +7,7 @@ export default function ContactUs() {
   return (
     <section id="contact" className="contact-us-container">
         <div className="contact-us-top">
-          <Text size="header" content="HUBUNGI KAMi" style={{}} />
+          <Text size="header" content="HUBUNGI KAMI" style={{}} />
         </div>
         <div className="contact-us-low">
           <Button
