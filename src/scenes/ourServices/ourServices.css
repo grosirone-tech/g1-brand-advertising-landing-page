@@ -1,7 +1,10 @@
 .our-services {
+  display: flex;
+  flex-direction: column;
   padding: 40px 50px;
   text-align: center;
   align-items: center;
+  justify-content: center;
   height: auto;
   width: 100%;
   position: relative;
@@ -17,6 +20,7 @@
 
 .service-container {
   display: flex;
+  width: 85%;
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin: 2rem 2rem;
@@ -26,7 +30,7 @@
   flex: 1 1;
   margin: 10px;
   height: auto;
-  width: 18%;
+  /* width: 20%; */
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -40,8 +44,8 @@
 }
 
 .service:hover {
-  transform: scale(1.04);
-  box-shadow: 4px 5px 14px rgba(255, 255, 255, 0.53);
+  transform: scale(1.02);
+  box-shadow: 4px 5px 14px rgba(255, 255, 255, 0.285);
 }
 
 .services-img {
@@ -65,6 +69,10 @@
   max-width: 5rem;
 }
 
+.services-subheader {
+  margin-bottom: 10px;
+}
+
 .service-text {
   display: flex;
   flex-direction: column;
@@ -73,7 +81,7 @@
   color: rgb(31, 31, 31);
 }
 
-@media (max-width: 1056px) {
+@media (max-width: 1146px) {
   .service {
     flex: 1 1 35%;
   }
