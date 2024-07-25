@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 3em;
+    padding: 2em;
 }
 
 .contact-us-top {
@@ -15,6 +15,6 @@
 }
 
 .contact-us-low {
-    margin: 2em;
+    margin: 1em 2em 2em;
     display: flex;
 }
