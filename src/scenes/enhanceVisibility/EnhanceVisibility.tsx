@@ -26,18 +26,20 @@ const enhance = [
 
 export default function Enhance() {
   return (
-    <div className="enhance-container">
-      <Text size="header" content="WUJUDKAN VISIBILITAS BRAND ANDA" />
-      <div className="enhance-specifications">
-        {enhance.map((enhances) => (
-            <CardServices
-                key={enhances.id}
-                imageSrc={enhances.imageSrc}
-                subtitle={enhances.subtitle}
-                description={enhances.description}
-            />
-        ))}
+    <section id="product">
+      <div className="enhance-container">
+        <Text size="header" content="WUJUDKAN VISIBILITAS BRAND ANDA" />
+        <div className="enhance-specifications">
+          {enhance.map((enhances) => (
+              <CardServices
+                  key={enhances.id}
+                  imageSrc={enhances.imageSrc}
+                  subtitle={enhances.subtitle}
+                  description={enhances.description}
+              />
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
