@@ -84,13 +84,10 @@ export function Header() {
     selector: string,
     block: 'start' | 'center' | 'end' | 'nearest' = 'start',
   ) => {
-    console.log('scrollIntoView called with selector:', selector);
     const element = document.querySelector(selector);
     if (element) {
-      console.log('Element found:', element);
-      console.log('Scrolling into view...');
       element.scrollIntoView({behavior: 'smooth', block});
-      closeMenu(); // Close the menu after clicking on a menu item
+      closeMenu();
     } else {
       console.log('Element not found:', selector);
     }
