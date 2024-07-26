@@ -34,7 +34,7 @@ const OurTechnology: React.FC = () => {
       </div>
       {/* Content */}
       <Text
-        size="header"
+        size="subheader"
         content="TEKNOLOGI KAMI"
         className="our-technology-title"
       />
