@@ -28,7 +28,7 @@ export default function Enhance() {
   return (
     <section id="product">
       <div className="enhance-container">
-        <Text size="header" content="WUJUDKAN VISIBILITAS BRAND ANDA" />
+        <Text size="subheader" content="WUJUDKAN VISIBILITAS BRAND ANDA" />
         <div className="enhance-specifications">
           {enhance.map((enhances) => (
               <CardServices
