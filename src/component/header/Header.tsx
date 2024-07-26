@@ -201,37 +201,37 @@ export function Header() {
       </div>
       <div className="navigation">
         <Text
-          size="normal"
+          size="navbar"
           content="Home"
           className={`nav-text ${activeSection === 'home' ? 'active' : ''}`}
           onClick={() => handleNavClick('home')}
         />
         <Text
-          size="normal"
+          size="navbar"
           content="Services"
           className={`nav-text ${activeSection === 'services' ? 'active' : ''}`}
           onClick={() => handleNavClick('services')}
         />
         <Text
-          size="normal"
+          size="navbar"
           content="Prices"
           className={`nav-text ${activeSection === 'pricing' ? 'active' : ''}`}
           onClick={() => handleNavClick('pricing')}
         />
         <Text
-          size="normal"
+          size="navbar"
           content="Work"
           className={`nav-text ${activeSection === 'product' ? 'active' : ''}`}
           onClick={() => handleNavClick('product')}
         />
         <Text
-          size="normal"
+          size="navbar"
           content="Tech"
           className={`nav-text ${activeSection === 'tech' ? 'active' : ''}`}
           onClick={() => handleNavClick('tech')}
         />
         <Text
-          size="normal"
+          size="navbar"
           content="Contact Us"
           className={`nav-text ${activeSection === 'contact' ? 'active' : ''}`}
           onClick={() => handleNavClick('contact')}
