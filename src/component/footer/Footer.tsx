@@ -7,7 +7,7 @@ export default function Footer () {
     return (
         <footer>
             <div className="footer-left">
-                <Text size="normal" content="&copy; 2024, G1 Brand Advertising" />
+                <Text size="small" content="&copy; 2024, G1 Brand Advertising" />
             </div>
             <hr />
             <div className="footer-right">
