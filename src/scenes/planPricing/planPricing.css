@@ -1,7 +1,11 @@
+.plan-section {
+    background-color: #1c1c1c;
+    padding: 4em 6em;
+}
+
 .plan-container {
     background-color: rgb(237, 237, 237);
     border-radius: 40px;
-    margin: 6em 12em;
     padding: 2em;
     color: rgb(59, 59, 59);
     box-shadow: 0px 0px 14px 1px #00000062;
@@ -11,6 +15,7 @@
     flex-direction: column;
     justify-content: center;
     z-index: 2;
+    box-shadow: 0px 0px 12px 0px rgba(255, 255, 255, 0.379);
 }
 
 .table-harga {
@@ -20,15 +25,18 @@
 }
 
 @media (max-width: 1024px) {
-    .plan-container {
-        margin: 6em;
+    .plan-section {
+        padding: 1em 3em;
+    }
 
+    .plan-container {
+        margin: 3em;
     }
 }
 
 @media (max-width: 768px) {
     .plan-container {
-        margin: 5em;
-        padding: 2em .7em;
+        margin: 2em;
+        padding: 1.5em .7em;
     }
 }

@@ -68,14 +68,16 @@ const tableBodies = ['data1', 'data2', 'data3', 'data4'];
 export default function PlanPricing() {
   return (
     <section id="pricing">
-      <div className="plan-container">
-        <Text size="header" content="RENCANA DAN HARGA" />
-        <div className="table-harga">
-          <Table
-            data={data}
-            tableHeaders={tableHeaders}
-            tableBodies={tableBodies}
-          />
+      <div className="plan-section">
+        <div className="plan-container">
+          <Text size="header" content="RENCANA DAN HARGA" />
+          <div className="table-harga">
+            <Table
+              data={data}
+              tableHeaders={tableHeaders}
+              tableBodies={tableBodies}
+            />
+          </div>
         </div>
       </div>
     </section>
