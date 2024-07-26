@@ -18,7 +18,9 @@ export default function Main() {
       <Enhance />
       <OurTechnology />
       <ContactUs/>
-      <Footer />
+      <div className={styles.footer}>
+        <Footer />
+      </div>
     </main>
   );
 }
