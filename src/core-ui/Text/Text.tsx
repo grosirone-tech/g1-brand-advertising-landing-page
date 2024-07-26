@@ -18,7 +18,7 @@ export function Text(props: Props) {
     const combinedClass = className ? `${baseClass} ${className}` : baseClass;
 
   return (
-    <span className={combinedClass}>
+    <span className={combinedClass} onClick={onClick}>
         {content}
     </span>
   );
