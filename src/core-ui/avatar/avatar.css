@@ -1,9 +1,9 @@
 .avatars {
     border-radius: 100%;
     background-color: rgb(236, 236, 236);
-    width: 45px;
-    height: 45px;
-    padding: 11px;
+    width: 35px;
+    height: 35px;
+    padding: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
