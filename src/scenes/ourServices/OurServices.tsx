@@ -29,7 +29,7 @@ const OurServices: React.FC = () => {
     {
       id: '4',
       imageSrc: 'https://cdn-icons-png.flaticon.com/512/2867/2867142.png',
-      subtitle: 'Penargetan lokasi Yang Tepat',
+      subtitle: 'Penargetan Lokasi yang Tepat',
       description:
         'Kami menyediakan layanan penargetan lokasi yang dapat membantu Anda mencapai target audiens.',
     },
@@ -37,7 +37,7 @@ const OurServices: React.FC = () => {
 
   return (
     <section className="our-services" id="services">
-      <Text size="header" content="LAYANAN KAMI" className="our-services-title" />
+      <Text size="subheader" content="LAYANAN KAMI" className="our-services-title" />
       <div className="service-container">
         {servicesData.map((service) => (
           <CardServices

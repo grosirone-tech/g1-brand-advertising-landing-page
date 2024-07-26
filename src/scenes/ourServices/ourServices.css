@@ -12,7 +12,7 @@
   height: auto;
   align-items: center;
   margin-bottom: 30px;
-  color: #f6f6f6;
+  color: rgb(172, 172, 172);
 }
 
 .service-container {
@@ -24,14 +24,14 @@
 
 .service {
   flex: 1 1;
-  margin: 10px;
+  margin: 20px;
   height: auto;
   width: 18%;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f6f6f6;
+  background-color: #2f2f2f;
   padding: 30px 20px;
   border-radius: 35px;
   transition: all 0.4s ease-in-out;
@@ -41,13 +41,13 @@
 
 .service:hover {
   transform: scale(1.04);
-  box-shadow: 4px 5px 14px rgba(255, 255, 255, 0.53);
+  box-shadow: 4px 5px 14px rgba(93, 93, 93, 0.689);
 }
 
 .services-img {
   width: 7.5rem;
   height: 7.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   background-color: #d42f13;
   border-radius: 50%;
   display: flex;
@@ -70,7 +70,7 @@
   flex-direction: column;
   align-items: center;
   margin-top: 15px;
-  color: rgb(31, 31, 31);
+  color: rgb(152, 152, 152);
 }
 
 @media (max-width: 1056px) {
