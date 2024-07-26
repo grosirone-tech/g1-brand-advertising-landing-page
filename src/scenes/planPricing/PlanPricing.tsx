@@ -70,7 +70,7 @@ export default function PlanPricing() {
     <section id="pricing">
       <div className="plan-section">
         <div className="plan-container">
-          <Text size="header" content="RENCANA DAN HARGA" />
+          <Text size="subheader" content="RENCANA DAN HARGA" />
           <div className="table-harga">
             <Table
               data={data}

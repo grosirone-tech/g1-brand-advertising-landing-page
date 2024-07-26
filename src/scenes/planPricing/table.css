@@ -23,8 +23,7 @@
 }
 
 .table-container table thead td {
-    text-align: center;
-    
+    text-align: center;   
 }
 
 .table-container table thead td, tbody tr td {
@@ -41,15 +40,15 @@
 }
 
 .table-container table thead td:nth-child(2), tbody tr td:nth-child(2) {
-    background-color: rgb(232, 232, 232);
+    background-color: rgb(62, 62, 62);
 }
 
 .table-container table thead td:nth-child(3), tbody tr td:nth-child(3) {
-    background-color: #f8d37e;
+    background-color: rgb(49, 49, 49);
 }
 
 .table-container table thead td:nth-child(4), tbody tr td:nth-child(4) {
-    background-color: #f6c143;
+    background-color: rgb(36, 36, 36);
 }
 
 @media (max-width: 910px) {
