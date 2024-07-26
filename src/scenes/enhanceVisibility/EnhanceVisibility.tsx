@@ -7,20 +7,20 @@ const enhance = [
   {
     id: '1',
     imageSrc: 'https://placehold.co/250',
-    subtitle: '',
-    description: '30 Spot Penayangan Iklan Digital',
+    subtitle: '30 Spot Penayangan Iklan Digital',
+    description: '',
   },
   {
     id: '2',
     imageSrc: 'https://placehold.co/250',
-    subtitle: '',
-    description: '108 Kali Penayangan Setiap Hari (6 AM - 3 PM)',
+    subtitle: '108 Kali Penayangan Setiap Hari (6 AM - 3 PM)',
+    description: '',
   },
   {
     id: '3',
     imageSrc: 'https://placehold.co/250',
-    subtitle: '',
-    description: '145.000 Pengunjung Pasar/Hari',
+    subtitle: '145.000 Pengunjung Pasar/Hari',
+    description: '',
   }
 ];
 

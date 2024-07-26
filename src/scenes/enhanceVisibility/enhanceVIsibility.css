@@ -8,12 +8,13 @@
     width: 100%;
     height: auto;
     position: relative;
-    padding: 2em 4em;
+    padding: 2em;
 }
 
 .enhance-specifications {
-    padding: 1em;
+    padding: 1.5em 3em;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    width: 100%;
+    justify-content: space-between;
 }
