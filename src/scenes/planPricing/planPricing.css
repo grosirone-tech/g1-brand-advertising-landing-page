@@ -1,6 +1,6 @@
 .plan-section {
     background-color: #1c1c1c;
-    padding: 4em 12em;
+    padding: 4em 6em;
 }
 
 .plan-container {
@@ -25,7 +25,7 @@
 
 @media (max-width: 1024px) {
     .plan-section {
-        padding: 1em 6em;
+        padding: 1em 3em;
     }
 
     .plan-container {
@@ -34,10 +34,6 @@
 }
 
 @media (max-width: 768px) {
-    .plan-section {
-        padding: 1em 2em;
-    }
-
     .plan-container {
         margin: 2em;
         padding: 1.5em .7em;
