@@ -12,7 +12,7 @@ export default function Footer () {
             <hr />
             <div className="footer-right">
                 <div className="footer-text">
-                    <Text size="normal" content="Connect with Us" />
+                    <Text size="navbar" content="Connect with Us" />
                 </div>
                 <div className="footer-icons">
                     <Avatar icon={<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
