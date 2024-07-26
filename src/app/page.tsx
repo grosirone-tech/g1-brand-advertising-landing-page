@@ -12,14 +12,12 @@ export default function Main() {
   return (
     <main className={styles.main}>
       <Header />
-      <div id='tech'>
-        <Home />
-      </div>
+      <Home />
       <OurServices />
       <PlanPricing />
       <Enhance />
       <OurTechnology />
-      <ContactUs />
+      <ContactUs/>
       <Footer />
     </main>
   );
