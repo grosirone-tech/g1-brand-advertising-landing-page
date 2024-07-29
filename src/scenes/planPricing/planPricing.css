@@ -1,12 +1,11 @@
 .plan-section {
     background-color: #1c1c1c;
-    padding: 4em 6em;
+    padding: 1em 5em;
 }
 
 .plan-container {
-    background-color: rgb(59, 58, 58);
+    background-color: #1c1c1c;
     border-radius: 40px;
-    padding: 2em;
     text-align: center;
     display: flex;
     flex: 0 0 auto;
@@ -28,13 +27,13 @@
     }
 
     .plan-container {
-        margin: 3em;
+        margin: 1em;
     }
 }
 
 @media (max-width: 768px) {
     .plan-container {
-        margin: 2em;
-        padding: 1.5em .7em;
+        margin: 1em;
+        padding: 0em .7em;
     }
 }

@@ -8,14 +8,24 @@
     width: 100%;
     height: auto;
     position: relative;
-    padding: 2em;
+    padding: 3em 2em;
     color: rgb(172, 172, 172);
 }
 
 .enhance-specifications {
-    padding: 1.5em 3em;
+    padding: 4em 3em 3em;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     justify-content: space-between;
+}
+
+@media (max-width: 756px){
+    .enhance-container {
+        padding: .5em 2em;
+    }
+
+    .enhance-specifications {
+        padding: 2em 3em;
+    }
 }
