@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2em 2em 1em;
+    padding: 2em 2em 0em;
     background-color: #1c1c1c;
 }
 
@@ -16,6 +16,6 @@
 }
 
 .contact-us-low {
-    margin: 1em 2em 2em;
+    margin: 1em 2em;
     display: flex;
 }
