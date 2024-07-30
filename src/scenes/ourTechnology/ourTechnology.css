@@ -16,10 +16,10 @@
 
 .parallax-background {
   position: absolute;
-  top: -80%;
+  top: -60%;
   left: 0;
-  width: 100%;
-  height: 130%;
+  width: 110%;
+  height: 120%;
   background-size: cover;
   background-position: center;
   z-index: -1;
@@ -28,7 +28,8 @@
 
 .parallax-background img {
   width: 100%;
-  height: 140%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .our-technology-title {

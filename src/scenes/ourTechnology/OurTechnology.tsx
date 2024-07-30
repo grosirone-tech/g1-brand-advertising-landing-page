@@ -30,7 +30,7 @@ const OurTechnology: React.FC = () => {
   return (
     <section className="our-technology" id="tech" ref={containerRef}>
       <div className="parallax-background" ref={imageRef}>
-        <img src="https://images.pexels.com/photos/163255/sunrise-sun-morgenrot-skies-163255.jpeg?cs=srgb&dl=pexels-pixabay-163255.jpg&fm=jpg" />
+        <img src="https://img.lovepik.com/background/20211021/large/lovepik-simple-technology-background-image_401491786.jpg" />
       </div>
       {/* Content */}
       <Text
@@ -41,7 +41,7 @@ const OurTechnology: React.FC = () => {
       <div className="our-technology-container">
         <div className="our-technology-img">
           <img
-            src="https://imgv3.fotor.com/images/cover-photo-image/AI-illustration-of-a-dragon-by-Fotor-AI-text-to-image-generator.jpg"
+            src="https://www.twintel.net/wp-content/uploads/2023/10/10-25-23.jpg"
             alt="Technology"
           />
         </div>
