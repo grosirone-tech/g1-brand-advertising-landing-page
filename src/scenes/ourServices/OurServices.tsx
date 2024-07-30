@@ -98,9 +98,9 @@ const OurServices: React.FC = () => {
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 92.53 122.88"
-          fill='white'
-          width='70'
-          height='70'
+          fill="white"
+          width="70"
+          height="70"
           style={{fillRule: 'evenodd'}}
         >
           <path
