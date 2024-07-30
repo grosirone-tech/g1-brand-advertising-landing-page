@@ -83,6 +83,9 @@
   .service {
     flex: 1 1 100%;
   }
+  .service-container {
+    margin: 0;
+  }
 }
 
 .service.hovered {
