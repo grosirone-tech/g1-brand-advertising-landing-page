@@ -1,31 +1,31 @@
 .enhance-container {
-    background-color: #1c1c1c;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: auto;
-    position: relative;
-    padding: 2em;
-    color: rgb(172, 172, 172);
+  background-color: #1c1c1c;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding: 2em;
+  color: rgb(172, 172, 172);
 }
 
 .enhance-specifications {
-    padding: 2.5em 3em 2em;
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: space-between;
+  padding: 2.5em 3em 2em;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
 }
 
-@media (max-width: 756px){
-    .enhance-container {
-        padding: .5em 2em;
-    }
+@media (max-width: 756px) {
+  .enhance-container {
+    padding: 0.5em 2em;
+  }
 
-    .enhance-specifications {
-        padding: 2em 3em;
-    }
+  .enhance-specifications {
+    padding: 2em 1em;
+  }
 }
