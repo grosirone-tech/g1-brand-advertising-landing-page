@@ -15,7 +15,7 @@
 .navbar-up {
   display: flex;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.951);
+  background-color: #1c1c1c;
   padding: 1rem 3rem;
   height: 4.5rem;
   font-weight: 500;

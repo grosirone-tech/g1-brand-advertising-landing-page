@@ -7,53 +7,54 @@ import {useState, useEffect} from 'react';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [scrollPosition, setScrollPosition] = useState(0);
   const [navClass, setNavClass] = useState('navbar');
   const [activeSection, setActiveSection] = useState('');
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollPosition = window.pageYOffset;
-
-      if (currentScrollPosition > 100) {
-        setNavClass('navbar navbar-up');
-      } else {
-        setNavClass('navbar');
-      }
-
-      setScrollPosition(currentScrollPosition);
+      setNavClass(window.pageYOffset > 100 ? 'navbar navbar-up' : 'navbar');
     };
 
     window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [scrollPosition]);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth > 867) {
+      if (window.innerWidth > 867) setIsMenuOpen(false);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  useEffect(() => {
+    const sections = document.querySelectorAll('[id]');
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setActiveSection(entry.target.id);
+        });
+      },
+      {threshold: 0.9},
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => sections.forEach((section) => observer.unobserve(section));
+  }, []);
+
+  useEffect(() => {
+    const handleOutsideClick = (event: MouseEvent) => {
+      const menuElement = document.querySelector('.dropdown');
+      if (menuElement && !menuElement.contains(event.target as Node)) {
         setIsMenuOpen(false);
       }
     };
 
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setIsMenuOpen(false);
     };
-  }, []);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-  };
-
-  useEffect(() => {
     if (isMenuOpen) {
       document.addEventListener('click', handleOutsideClick);
       document.addEventListener('keydown', handleKeyDown);
@@ -61,24 +62,14 @@ export function Header() {
       document.removeEventListener('click', handleOutsideClick);
       document.removeEventListener('keydown', handleKeyDown);
     }
+
     return () => {
       document.removeEventListener('click', handleOutsideClick);
       document.removeEventListener('keydown', handleKeyDown);
     };
   }, [isMenuOpen]);
 
-  const handleOutsideClick = (event: MouseEvent) => {
-    const menuElement = document.querySelector('.dropdown');
-    if (menuElement && !menuElement.contains(event.target as Node)) {
-      closeMenu();
-    }
-  };
-
-  const handleKeyDown = (event: KeyboardEvent) => {
-    if (event.key === 'Escape') {
-      closeMenu();
-    }
-  };
+  const toggleMenu = () => setIsMenuOpen((prev) => !prev);
 
   const scrollIntoView = (
     selector: string,
@@ -87,43 +78,27 @@ export function Header() {
     const element = document.querySelector(selector);
     if (element) {
       element.scrollIntoView({behavior: 'smooth', block});
-      closeMenu();
+      setIsMenuOpen(false);
     } else {
       console.log('Element not found:', selector);
     }
   };
 
-  useEffect(() => {
-    const sections = document.querySelectorAll('[id]');
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      {threshold: 0.6},
-    );
-
-    sections.forEach((section) => {
-      observer.observe(section);
-    });
-
-    return () => {
-      sections.forEach((section) => {
-        observer.unobserve(section);
-      });
-    };
-  }, []);
-
   const handleNavClick = (
     sectionId: string,
     block: 'start' | 'center' | 'end' | 'nearest' = 'start',
   ) => {
-    setActiveSection(sectionId);
     scrollIntoView(`#${sectionId}`, block);
   };
+
+  const navItems = [
+    {id: 'home', label: 'Home'},
+    {id: 'services', label: 'Services'},
+    {id: 'pricing', label: 'Prices'},
+    {id: 'product', label: 'Work'},
+    {id: 'tech', label: 'Tech'},
+    {id: 'contact', label: 'Contact Us'},
+  ];
 
   return (
     <div className={navClass}>
@@ -135,61 +110,22 @@ export function Header() {
       </div>
       <div className={`dropdown ${isMenuOpen ? 'opened' : ''}`}>
         <div className="dropdown-content">
-          <Text
-            size="normal"
-            content="Home"
-            className={`nav-text dropdown-nav-text ${
-              activeSection === 'home' ? 'active' : ''
-            }`}
-            onClick={() => handleNavClick('home', 'nearest')}
-          />
-          <Text
-            size="normal"
-            content="Services"
-            className={`nav-text dropdown-nav-text ${
-              activeSection === 'services' ? 'active' : ''
-            }`}
-            onClick={() => handleNavClick('services', 'nearest')}
-          />
-          <Text
-            size="normal"
-            content="Prices"
-            className={`nav-text dropdown-nav-text ${
-              activeSection === 'pricing' ? 'active' : ''
-            }`}
-            onClick={() => handleNavClick('pricing', 'nearest')}
-          />
-          <Text
-            size="normal"
-            content="Work"
-            className={`nav-text dropdown-nav-text ${
-              activeSection === 'product' ? 'active' : ''
-            }`}
-            onClick={() => handleNavClick('product', 'nearest')}
-          />
-          <Text
-            size="normal"
-            content="Tech"
-            className={`nav-text dropdown-nav-text ${
-              activeSection === 'tech' ? 'active' : ''
-            }`}
-            onClick={() => handleNavClick('tech', 'nearest')}
-          />
-          <Text
-            size="normal"
-            content="Contact Us"
-            className={`nav-text dropdown-nav-text ${
-              activeSection === 'contact' ? 'active' : ''
-            }`}
-            onClick={() => handleNavClick('contact', 'nearest')}
-          />
+          {navItems.map(({id, label}) => (
+            <Text
+              key={id}
+              size="normal"
+              content={label}
+              className={`nav-text dropdown-nav-text ${
+                activeSection === id ? 'active' : ''
+              }`}
+              onClick={() => handleNavClick(id, 'nearest')}
+            />
+          ))}
           <div className="login">
             <Button
               type="primary"
               content="Login"
-              onClick={() => {
-                console.log('clicked');
-              }}
+              onClick={() => console.log('clicked')}
               className="login"
               style={{width: '6rem'}}
             />
@@ -197,49 +133,20 @@ export function Header() {
         </div>
       </div>
       <div className="navigation">
-        <Text
-          size="navbar"
-          content="Home"
-          className={`nav-text ${activeSection === 'home' ? 'active' : ''}`}
-          onClick={() => handleNavClick('home')}
-        />
-        <Text
-          size="navbar"
-          content="Services"
-          className={`nav-text ${activeSection === 'services' ? 'active' : ''}`}
-          onClick={() => handleNavClick('services')}
-        />
-        <Text
-          size="navbar"
-          content="Prices"
-          className={`nav-text ${activeSection === 'pricing' ? 'active' : ''}`}
-          onClick={() => handleNavClick('pricing')}
-        />
-        <Text
-          size="navbar"
-          content="Work"
-          className={`nav-text ${activeSection === 'product' ? 'active' : ''}`}
-          onClick={() => handleNavClick('product')}
-        />
-        <Text
-          size="navbar"
-          content="Tech"
-          className={`nav-text ${activeSection === 'tech' ? 'active' : ''}`}
-          onClick={() => handleNavClick('tech')}
-        />
-        <Text
-          size="navbar"
-          content="Contact Us"
-          className={`nav-text ${activeSection === 'contact' ? 'active' : ''}`}
-          onClick={() => handleNavClick('contact')}
-        />
+        {navItems.map(({id, label}) => (
+          <Text
+            key={id}
+            size="navbar"
+            content={label}
+            className={`nav-text ${activeSection === id ? 'active' : ''}`}
+            onClick={() => handleNavClick(id)}
+          />
+        ))}
         <Button
           type="primary"
           content="Login"
           className="login"
-          onClick={() => {
-            console.log('clicked');
-          }}
+          onClick={() => console.log('clicked')}
           style={{width: 'auto', fontWeight: 'bolder'}}
         />
       </div>
