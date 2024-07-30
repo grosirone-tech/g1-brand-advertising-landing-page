@@ -8,28 +8,8 @@
   padding: 40px 20px;
   width: auto;
   height: auto;
-  background-color: rgba(0, 0, 0, 0.666);
+  background-color: #1c1c1c;
   color: azure;
-  box-shadow: inset rgba(60, 70, 85, 0.5) 0px 0px 40px 0px,
-    rgba(0, 0, 0, 0.3) 0px 30px 100px -24px;
-}
-
-.parallax-background {
-  position: absolute;
-  top: -60%;
-  left: 0;
-  width: 110%;
-  height: 120%;
-  background-size: cover;
-  background-position: center;
-  z-index: -1;
-  transition: all 0.1s ease-out;
-}
-
-.parallax-background img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .our-technology-title {
@@ -59,6 +39,7 @@
   display: flex;
   justify-content: end;
   align-items: end;
+  filter: invert(1);
 }
 
 .our-technology-img img {
