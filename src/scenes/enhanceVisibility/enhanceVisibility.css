@@ -8,12 +8,12 @@
   width: 100%;
   height: auto;
   position: relative;
-  padding: 2em;
+  padding: 70px 50px;
   color: rgb(172, 172, 172);
 }
 
 .enhance-specifications {
-  padding: 2.5em 3em 2em;
+  padding: 60px 50px;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
