@@ -4,6 +4,7 @@ import './home.css';
 import {Text} from '@/core-ui/text/Text';
 import {Button} from '@/core-ui/button/Button';
 import React, {useEffect, useRef} from 'react';
+import HomeImage from "../../../public/home.jpg"
 
 const Home: React.FC = () => {
   const homeRef = useRef<HTMLDivElement>(null);
@@ -54,7 +55,7 @@ const Home: React.FC = () => {
       <div className="container">
         <div className="home-img" ref={imageRef}>
           <img
-            src="https://i.ytimg.com/vi/RDmmy9GEc5U/maxresdefault.jpg"
+            src={HomeImage.src}
             alt="home"
           />
         </div>
