@@ -38,7 +38,10 @@ export function Table({
               <tr key={rowData.id}>
                 {tableBodies.map((body, index) => (
                   <td key={index} className={index === 0 ? 'left-aligned' : ''}>
-                    <Text size="small" content={getProperty(rowData, body)} />
+                    <Text
+                      size={index === 0 ? 'normal' : 'small'}
+                      content={getProperty(rowData, body)}
+                    />
                   </td>
                 ))}
               </tr>
