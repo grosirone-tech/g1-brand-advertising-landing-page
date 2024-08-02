@@ -2,7 +2,7 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: .5em 3em 2em 3em;
+    padding: 2em 3em 2em 3em;
     align-items: flex-end;
     background-color: #1c1c1c;
 }
