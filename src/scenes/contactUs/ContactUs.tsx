@@ -1,18 +1,44 @@
-import React from 'react';
+'use client';
+
+import React, {useState} from 'react';
 import {Text} from '../../core-ui/text/Text';
 import {Button} from '@/core-ui/button/Button';
 import './contactUs.css';
 
 export default function ContactUs() {
+  const [formVisible, setFormVisible] = useState(false);
+
+  const handleButtonClick = () => {
+    setFormVisible((prevState) => !prevState);
+  };
+
   return (
     <section id="contact" className="contact-us-container">
       <div className="contact-us-top">
-        <Text size="subheader" content="HUBUNGI KAMI" style={{}} />
+        <Text size="subheader" content="HUBUNGI KAMI" />
+      </div>
+      <div className="contact-us-form">
+        {formVisible && (
+          <form>
+            <div className="form-section">
+              <input type="text" name="name" placeholder="Name" />
+              <input type="email" name="email" placeholder="Email" />
+            </div>
+            <div className="form-section">
+              <input type="tel" name="number" placeholder="Phone Number" />
+            </div>
+            <div className="form-section">
+              <textarea name="comment" placeholder="Comment" />
+            </div>
+            <Button type="secondary" content="Send" />
+          </form>
+        )}
       </div>
       <div className="contact-us-low">
         <Button
           type="primary"
           content="gtrone@grosir.one"
+          onClick={handleButtonClick}
           icon={
             <svg
               xmlns="http://www.w3.org/2000/svg"
