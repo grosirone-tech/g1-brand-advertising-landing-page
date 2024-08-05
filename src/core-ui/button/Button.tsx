@@ -24,7 +24,8 @@ export function Button(props: Props) {
       onClick={onClick}
     >
       {icon && <span className="button-icon">{icon}</span>}
-      <Text size="normal" content={content} />
+
+      <Text size={`${type === 'primary' ? 'normal' : 'small'}`} content={content} />
     </button>
   );
 }
