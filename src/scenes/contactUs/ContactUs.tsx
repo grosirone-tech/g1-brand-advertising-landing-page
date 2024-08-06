@@ -1,8 +1,8 @@
 'use client';
 
-import React, {useState} from 'react';
-import {Text} from '../../core-ui/text/Text';
-import {Button} from '@/core-ui/button/Button';
+import React, { useState } from 'react';
+import { Text } from '../../core-ui/text/Text';
+import { Button } from '@/core-ui/button/Button';
 import './contactUs.css';
 
 export default function ContactUs() {
@@ -20,15 +20,23 @@ export default function ContactUs() {
       <div className="contact-us-form">
         {formVisible && (
           <form>
-            <div className="form-section">
-              <input type="text" name="name" placeholder="Name" />
-              <input type="email" name="email" placeholder="Email" />
+            <div className="form-section-row">
+              <div className="input-container">
+                <input type="text" name="name" placeholder=" " id="name" />
+                <label htmlFor="name">Name</label>
+              </div>
+              <div className="input-container">
+                <input type="email" name="email" placeholder=" " id="email" />
+                <label htmlFor="email">Email</label>
+              </div>
             </div>
             <div className="form-section">
-              <input type="tel" name="number" placeholder="Phone Number" />
+                <input type="tel" name="number" placeholder=" " id="number" />
+                <label htmlFor="number">Phone Number</label>
             </div>
             <div className="form-section">
-              <textarea name="comment" placeholder="Comment" />
+                <textarea name="comment" placeholder=" " id="comment" />
+                <label htmlFor="comment">Comment</label>
             </div>
             <Button type="secondary" content="Send" />
           </form>
