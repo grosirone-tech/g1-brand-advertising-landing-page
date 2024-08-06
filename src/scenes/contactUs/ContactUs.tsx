@@ -6,47 +6,20 @@ import { Button } from '@/core-ui/button/Button';
 import './contactUs.css';
 
 export default function ContactUs() {
-  const [formVisible, setFormVisible] = useState(false);
-
-  const handleButtonClick = () => {
-    setFormVisible((prevState) => !prevState);
-  };
+  function mailto (){
+      window.location.href = "mailto:g1@gmail.com?subject=Hello";
+  }
 
   return (
     <section id="contact" className="contact-us-container">
       <div className="contact-us-top">
         <Text size="subheader" content="HUBUNGI KAMI" />
       </div>
-      <div className="contact-us-form">
-        {formVisible && (
-          <form>
-            <div className="form-section-row">
-              <div className="input-container">
-                <input type="text" name="name" placeholder=" " id="name" />
-                <label htmlFor="name">Name</label>
-              </div>
-              <div className="input-container">
-                <input type="email" name="email" placeholder=" " id="email" />
-                <label htmlFor="email">Email</label>
-              </div>
-            </div>
-            <div className="form-section">
-                <input type="tel" name="number" placeholder=" " id="number" />
-                <label htmlFor="number">Phone Number</label>
-            </div>
-            <div className="form-section">
-                <textarea name="comment" placeholder=" " id="comment" />
-                <label htmlFor="comment">Comment</label>
-            </div>
-            <Button type="secondary" content="Send" />
-          </form>
-        )}
-      </div>
       <div className="contact-us-low">
         <Button
           type="primary"
           content="gtrone@grosir.one"
-          onClick={handleButtonClick}
+          onClick={mailto}
           icon={
             <svg
               xmlns="http://www.w3.org/2000/svg"
