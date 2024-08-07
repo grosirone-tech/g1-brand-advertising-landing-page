@@ -4,7 +4,7 @@ import './home.css';
 import {Text} from '@/core-ui/text/Text';
 import {Button} from '@/core-ui/button/Button';
 import React, {useEffect, useRef} from 'react';
-import HomeImage from "../../../public/homepage.png"
+import HomeImage from "../../../public/home.png"
 
 const Home: React.FC = () => {
   const homeRef = useRef<HTMLDivElement>(null);
