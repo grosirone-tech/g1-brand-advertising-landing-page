@@ -59,6 +59,10 @@
 
     .table-container {
         overflow-x: auto;
-        margin-top: 3em 0;
+        margin-top: 3em;
+    }
+
+    .table-container table {
+        margin: .4em;
     }
 }
