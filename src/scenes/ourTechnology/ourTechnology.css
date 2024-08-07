@@ -112,12 +112,19 @@
 }
 
 @media (max-width: 480px) {
+  .our-technology-container{
+    padding: 5px;
+  }
+
+  .our-technology {
+    padding: 20px;
+  }
   .our-technology-img {
     width: 100%;
   }
 
   .our-technology-text {
-    width: 80%;
+    width: 90%;
     padding: 1rem 0.5rem;
   }
 }
