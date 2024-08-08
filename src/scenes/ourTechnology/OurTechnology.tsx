@@ -10,10 +10,10 @@ export default function Technology() {
     {id: '2', spec: 'Ukuran Pixel', desc: '1080 x 1920 pixels'},
     {id: '3', spec: 'Jenis Iklan', desc: 'Short Video'},
     {id: '4', spec: 'Jam Operasional Spot', desc: '6AM-3PM'},
-    {id: '5', spec: 'Market Exposure', desc: '108 Spot/titik'},
-    {id: '6', spec: 'Durasi per Iklan Orientasi', desc: '2 Markets Exposure'},
-    {id: '7', spec: 'Rotasi Iklan', desc: '30 detik (max)'},
-    {id: '8', spec: 'Rotasi Iklan', desc: 'Landscape'},
+    {id: '5', spec: 'Market', desc: '108 Spot/titik'},
+    {id: '6', spec: 'Exposure', desc: '2 Markets Exposure'},
+    {id: '7', spec: 'Durasi per Iklan', desc: '30 detik (max)'},
+    {id: '8', spec: 'Orientasi Iklan', desc: 'Landscape'},
     {id: '9', spec: 'Rotasi Iklan', desc: '5 menit (10 iklan/titik)'},
   ];
 
