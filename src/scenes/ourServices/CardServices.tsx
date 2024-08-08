@@ -19,8 +19,8 @@ const CardServices: React.FC<CardProps> = ({
     <div className="service">
       <div className="services-img">{imageSrc}</div>
       <div className="service-text">
-        <Text size="normal" content={subtitle} style={{marginBottom: '20px'}} />
-        <Text className="description" size="small" content={description} />
+        <Text size="normal" content={subtitle} style={{marginBottom: '10px', fontWeight: 'bold'}} />
+        <Text className="description" size="small" content={description} style={{display: 'flex', justifyContent: 'flex-end'}}/>
       </div>
     </div>
   );

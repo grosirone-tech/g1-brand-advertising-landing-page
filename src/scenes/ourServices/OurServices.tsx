@@ -39,7 +39,7 @@ const OurServices: React.FC = () => {
         </svg>
       ),
       title: 'Service 1',
-      subtitle: 'Instalasi & Pemasangan',
+      subtitle: 'Instalasi dan Pemasangan',
       description:
         'Kami menawarkan instalasi dan pemasangan yang mudah dan cepat.',
     },

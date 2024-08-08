@@ -60,7 +60,6 @@
 }
 
 .service img {
-  object-fit: contain;
   width: 100%;
   height: auto;
   align-items: center;
@@ -71,9 +70,9 @@
 .service-text {
   display: flex;
   flex-direction: column;
-  align-items: center;
   margin-top: 15px;
   color: rgb(152, 152, 152);
+  line-height: 1.3;
 }
 
 @media (max-width: 1056px) {
@@ -88,6 +87,15 @@
   }
   .service-container {
     margin: 0;
+  }
+  .services-img {
+    width: 5rem;
+    height: 5rem;
+  }
+  .service svg {
+    width: 100%;
+    height: auto;
+    max-width: 3rem;
   }
 }
 
