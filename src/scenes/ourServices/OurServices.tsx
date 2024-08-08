@@ -66,7 +66,7 @@ const OurServices: React.FC = () => {
           </g>
         </svg>
       ),
-      subtitle: 'Pemeliharaan & Dukungan Teknis',
+      subtitle: 'Pemeliharaan dan Dukungan Teknis',
       description:
         'Kami menyediakan pemeliharaan dan dukungan teknis agar sistem berjalan optimal',
     },
